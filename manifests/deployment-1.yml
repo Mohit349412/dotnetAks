@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "dotnetakscluster-e22d"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "dotnetakscluster-e22d"
+  template:
+    metadata:
+      labels:
+        app: "dotnetakscluster-e22d"
+    spec:
+      containers:
+        - name: "dotnetakscluster-e22d"
+          image: "testmediumacr.azurecr.io/dotnetakscluster"
+          ports:
+          - containerPort: 80
