@@ -48,3 +48,4 @@ jobs:
           testmediumacr.azurecr.io/dotnetakscluster:${{ github.sha }}
         imagepullsecrets: |
           dotnetakscludockerauth
+          
